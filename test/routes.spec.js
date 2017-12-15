@@ -248,7 +248,6 @@ describe('API Routes', (done) => {
         })
         .catch(error => { throw error; });
     });
-
   });
 
   describe('POST /api/v1/houses', () => {
@@ -266,6 +265,7 @@ describe('API Routes', (done) => {
           response.body.should.have.property('id');
         })
         .catch(error => { throw error; });
+        
     });
 
     it('should not add a house to database if name info is missing', () => {
