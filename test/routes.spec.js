@@ -794,7 +794,6 @@ describe('API Routes', (done) => {
           response.body.should.have.property('error');
           response.body.error.should.equal(`Could not find a bulletin with an id of 9898.`);
         })
-        
         .catch(error => { throw error; });
     });
   });
