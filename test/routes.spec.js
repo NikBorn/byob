@@ -258,7 +258,7 @@ describe('API Routes', (done) => {
         .send({
           name: 'The BIG House',
           secretKey: 'password',
-          id: '99'
+
         })
         .then(response => {
           response.should.have.status(201);
@@ -296,7 +296,6 @@ describe('API Routes', (done) => {
       return chai.request(server)
         .post('/api/v1/houses/1/users')
         .send({
-          id: '99',
           name: 'Barrack OBama',
           houseId: 1
         })
@@ -347,7 +346,6 @@ describe('API Routes', (done) => {
       return chai.request(server)
         .post('/api/v1/houses/1/bills')
         .send({
-          id: '99',
           name: 'fake bill',
           total: '$1,000,000',
           dueDate: 'never'
@@ -399,7 +397,6 @@ describe('API Routes', (done) => {
       return chai.request(server)
         .post('/api/v1/houses/2/chores')
         .send({
-          id: '99',
           name: 'fix stuff',
           details: 'fix anything'
         })
@@ -445,7 +442,6 @@ describe('API Routes', (done) => {
       return chai.request(server)
         .post('/api/v1/houses/1/bulletins')
         .send({
-          id: '99',
           title: 'fakedsfsdaf',
           body: 'more fakeness'
         })
